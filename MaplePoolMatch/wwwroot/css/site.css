@@ -1,0 +1,169 @@
+html {
+    font-size: 16px;
+    background-color: #223D14;
+}
+
+@media (min-width: 768px) {
+  html {
+    font-size: 18px;
+  }
+}
+
+html {
+  min-height: 100%;
+}
+
+body {
+    margin-bottom: 60px;
+    background-color: #2E862D;
+    color: #F5E0E0;
+}
+
+a {
+    text-decoration: none;
+}
+
+.primary {
+    background-color: #223D14;
+}
+
+.doprostred {
+    display: flex;
+    justify-content:center;
+    align-items:center;
+    height: 100vh;
+}
+
+.hlavicka {
+    box-shadow: 1px 1px 500px yellow;
+    background-color: #223d14d3;
+    padding: 15px;
+    position: fixed;
+    z-index: 1;
+    width: 100%;
+}
+
+.hlavicka .navbar-nav .nav-link {
+    color: #F5E0E0;
+}
+
+.navbar > .container-fluid {
+    justify-content: normal;
+}
+
+.register {
+    text-decoration: none;
+    color: #F5E0E0;
+    padding: 20px;
+    border: 1px #F5E0E0 solid;
+    border-radius: 5px;
+    margin: 30px 60px;
+    text-align: center;
+}
+
+    .register:hover {
+        color: white;
+    }
+
+.login-out {
+    text-decoration: none;
+    color: #F5E0E0;
+    margin: 0 30px;
+    font-size: 1.3rem;
+}
+
+    .login-out:hover {
+        color: white;
+    }
+
+.ball {
+    height: 80px;
+    width: 80px;
+    background-color: #181818;
+    border-radius: 50%;
+    margin: 0 30px 0 0;
+    transition: transform 4s ease-out;
+}
+
+.ball:hover {
+    transform: rotate(420deg);
+}
+
+.eight {
+    background-color: white;
+    display: flex;
+    border-radius: 50%;
+    width: 45%;
+    height: 45%;
+    justify-content: center;
+    align-items: center;
+    margin: 15px 18px;
+    line-height: unset;
+    font-weight: 900;
+    font-size: 36px;
+    font-family: Arial, Helvetica, sans-serif;
+    rotate: 30deg;
+    color: #181818;
+    transition: transform 3s ease-out;
+}
+
+.ball:hover > .eight {
+    transform: rotate(800deg);
+}
+
+#light {
+    color: #F5E0E0;
+    font-family:Bahnschrift
+}
+
+#yellow {
+    color: #ffed00e0;
+}
+
+.navbar-brand {
+    color: #F5E0E0;
+    font-size: 3rem;
+}
+
+.navbar-toggler {
+    background-color: #ffed00e0;
+}
+
+.card {
+    height: 40vh;
+    background-color: #ffed00e0;
+    box-shadow: 5px 5px 35px black;
+    border-radius: 9px;
+    margin: 9%;
+    min-width: fit-content;
+    transition: transform 0.2s;
+}
+
+    .card:hover {
+        transform: scale(1.05);
+        transition: transform 0.2s ease-in-out;
+    }
+
+h1 {
+    font-size: 6rem;
+    display: flex;
+    justify-content: center;
+    padding: 15px;
+    margin-top: 0 auto;
+    
+}
+
+h2 {
+    font-size: 4rem;
+    color: #223D14;
+}
+
+section {
+    position: relative;
+}
+
+.paticka {
+    bottom: 0;
+    background-color: #223D14;
+    height: 60px;
+}

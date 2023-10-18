@@ -1,0 +1,70 @@
+﻿@model IEnumerable<MaplePoolMatch.Models.Hraci>
+
+@{
+    ViewData["Title"] = "Seznam hráčů";
+}
+
+<h1>Seznam hráčů</h1>
+
+<p>
+    <a asp-action="Create">Přidat hráče</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Jmeno)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Prijmeni)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Email)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Vyhry)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Prohry)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Uspesnost)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Jmeno)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Prijmeni)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Email)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Vyhry)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Prohry)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Uspesnost)
+            </td>
+            <td>
+                <a asp-action="Details" asp-route-id="@item.Id">@item.Jmeno @item.Prijmeni</a> |
+                    @if (User.IsInRole(UserRoles.Admin))
+                    {
+                        <p>
+                            <a asp-action="Edit" asp-route-id="@item.Id">Edit</a> |
+                            <a asp-action="Delete" asp-route-id="@item.Id">Delete</a>
+                        </p>
+                    }
+            </td>
+        </tr>
+}
+    </tbody>
+</table>
