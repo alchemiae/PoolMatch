@@ -1,10 +1,11 @@
 ﻿using System.ComponentModel.DataAnnotations;
+using System.Security.Policy;
 
 namespace MaplePoolMatch.Models
 {
     public class Hraci
     {
-        [Key]
+        
         public int Id { get; set; }
 
         [Required]
@@ -21,9 +22,8 @@ namespace MaplePoolMatch.Models
         public int Prohry { get; set; } = 0;
 
         [Display(Name = "Rating")]
-        public double Uspesnost { 
+        public double? Uspesnost { 
             get => ((Vyhry + Prohry) != 0) ? Math.Round((double)Vyhry / (Vyhry + Prohry) * 100, 1) : 0;
-            private set { } 
         }
     }
 }
