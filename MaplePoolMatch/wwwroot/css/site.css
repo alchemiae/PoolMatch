@@ -52,17 +52,21 @@ a {
 }
 
 .register {
-    text-decoration: none;
     color: #F5E0E0;
-    padding: 20px;
-    border: 1px #F5E0E0 solid;
-    border-radius: 5px;
-    margin: 30px 60px;
-    text-align: center;
+    border: 1px solid white;
+    display: flex;
+    width: fit-content;
+    padding: 8px 13px;
+    margin-bottom: 15px;
 }
 
-    .register:hover {
-        color: white;
+.prihlasit {
+    background-color: #ffed00e0;
+    margin: 15px 0;
+}
+
+    .prihlasit:hover {
+        filter: brightness(110%);
     }
 
 .login-out {
